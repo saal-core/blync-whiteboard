@@ -3,9 +3,9 @@ FROM node:14-alpine
 
 WORKDIR /opt/app
 
-RUN chown -R 1000:1000 /opt/app
+# RUN chown -R 1000:1000 /opt/app
 
-USER 1000:1000
+# USER 1000:1000
 
 COPY package.json package-lock.json ./
 RUN npm ci --production
